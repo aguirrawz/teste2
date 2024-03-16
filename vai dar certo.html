@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> oi lets </title>
+
+    <style>
+        body{
+            background-color: green;
+        }
+
+        .painel{
+            margin: auto;
+            background-color: white;
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        #sim{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: green;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 10px;
+            color: white;
+            margin-left: -130px;
+        }
+        #nao{
+            height: 40px;
+            width: 60px;
+            background-color: red;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 70px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="painel">
+        <h1> oi lets </h1>
+
+        <img src="Screenshot_20240314_193443_Gallery.jpg" height="150" width="100px" alt="">
+
+        <h2> voce é bonita? </h2>
+        
+
+        <a href="https://youtu.be/2P_esm8cNgU?si=hx7ZGTT4t2bY9jXs"><button id="nao" > Não! </button></a>
+        <button onmouseover="fuja()" id="sim"> Sim! </button>
+        
+    </div>
+
+    <script>
+        function fuja(){
+            var botaoSim = document.getElementById("sim")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoSim.offsetWidth;
+            var maxY = alturaJanela - botaoSim.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoSim.style.left = aleatorioX + "px";
+            botaoSim.style.top = aleatorioY + "px";
+
+
+        }
+    </script>
+
+
+
+    
+</body>
+</html>
